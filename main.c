@@ -15,38 +15,39 @@ int main() {
 	if( 1<=h && h<=23 && 0<=m && m<=59){
 	  if( h<12){
 	  	if( 0<m && m<=30){
-	  	dakika();
+	  	minute();
 	    printf(" past");}
 	  else if( m>30){ 
 	  m=60-m;	
 	  h++;
-	  dakika();
+	  minute();
 	  printf(" minutes to ");}
 	  else {
 	  printf("\n o'clock ");
-	  saat();
+	  hour();
 	  }	
-	saat();	
+	hour();	
 	  }
 	  else if( 12<=h ){
 	h=h-12;	
 	if( 0<m && m<=30){
-	  	dakika();
+	  	minute();
 	    printf(" past");}
 	  else if( m>30){ 
 	  m=60-m;	
 	  h++;
-	  dakika();
+	  minute();
 	  printf(" minutes to ");}
 	  else {
 	  printf("\n o'clock ");
-	  saat();
+	  hour();
 	  }	
-	saat();
+	hour();
 	   }}
 	   	
  else{
- 	break;
+ 	printf("\n invalid expression ");
+	 break;
  } }
    
    return 0;
@@ -55,20 +56,20 @@ int main() {
 	int mdonusum(){
      	
 	  if( 0<m && m<=30){
-	  	dakika();
+	  	minute();
 	    printf(" past");}
 	  else if( m>30){ 
 	  m=60-m;	
 	  h++;
-	  dakika();
+	  minute();
 	  printf(" minutes to ");}
 	  else {
-	  saat();
+	  hour();
 	  printf("\n o'clock ");
 	  }		
 	      }
 	
-void saat(){
+void hour(){
 		switch (h) {
        case 1  : printf("one");    break;
        case 2  : printf("two");    break;
@@ -84,7 +85,7 @@ void saat(){
 	   case 12 : printf("twelve"); break;
 	   }}	
 	
-void dakika(){
+void minute(){
 		switch (m) {
        case 1  : printf("one");          break;
        case 2  : printf("two");          break;
