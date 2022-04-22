@@ -40,7 +40,7 @@ int main() {
 	  printf(" minutes to ");}
 	  else {
 	  printf("\n o'clock ");
-	  hour();
+	 
 	  }	
 	hour();
 	   }}
